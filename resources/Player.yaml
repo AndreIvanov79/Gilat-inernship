@@ -1,0 +1,17 @@
+id: 123
+name: John Doe
+score: 1000
+Friends:
+  - Friend 1
+  - Friend 2
+type: VIP
+Results:
+  Tennis: Win
+avatar: avatar.jpg
+profile page: https://example.com/profile/johndoe
+Scripts:
+  - Script 1
+  - Script 2
+createdAt: 2023-10-28T12:00:00
+updatedAt: 2023-10-28T14:30:00
+wasOnlineAt: 2023-10-28T14:00:00

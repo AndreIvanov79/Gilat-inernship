@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Player>
+    <id>123</id>
+    <name>John Doe</name>
+    <score>1000</score>
+    <Friends>
+        <Friend>Friend 1</Friend>
+        <Friend>Friend 2</Friend>
+        <!-- Add more friends as needed -->
+    </Friends>
+    <type>VIP</type>
+    <Results>
+        <Result>
+            <Game>Tennis</Game>
+            <Outcome>Win</Outcome>
+        </Result>
+        <!-- Add more game results as needed -->
+    </Results>
+    <avatar>avatar.jpg</avatar>
+    <profilePage>https://example.com/profile/johndoe</profilePage>
+    <Scripts>
+        <Script>Script 1</Script>
+        <Script>Script 2</Script>
+        <!-- Add more scripts as needed -->
+    </Scripts>
+    <createdAt>2023-10-28T12:00:00</createdAt>
+    <updatedAt>2023-10-28T14:30:00</updatedAt>
+    <wasOnlineAt>2023-10-28T14:00:00</wasOnlineAt>
+</Player>

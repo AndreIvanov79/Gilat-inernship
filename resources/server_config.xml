@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class>
+	<config>
+		<ipaddress>127.0.0.1</ipaddress>  
+        <port>7777</port>
+    </config>
+</class>
