@@ -29,17 +29,18 @@ public class TaskRunner {
 	}
 
 	public void start() {
-		for (Entry<Task, Options> entry : runnableTasks.entrySet())
+		for (Entry<Task, Options> entry : runnableTasks.entrySet()) {
 			try {
 				taskResult = entry.getKey().execute(entry.getValue());
 				if (taskResult.getExitCode() != 0) {
 					throw new TaskFailureException("BUILDING Failure at step " + entry.getKey().toString());
 				}
-				getLog();
 			} catch (InterruptedException | ExecutionException | IOException | TaskFailureException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			getLog();
+		}
 	}
 
 	private Map<Map<Task, Options>, Result> getLog() {

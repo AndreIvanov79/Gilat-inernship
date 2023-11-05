@@ -13,11 +13,11 @@ public class Main {
 		TaskRunner runner = new TaskRunnerBuilder()
 				.addTask(new CompileTask(), new Options().set("value1","-d")
 						.set("value2",".")
-						.set("value3","C:\\Users\\USER\\eclipse-workspace\\heartbeat-v0.0.1\\src\\greeting\\*.java"))
+						.set("value3","./src/greeting/*.java"))
 				.addTask(new RunTask(),new Options().set("value","greeting.HelloWorld"))
 				.addTask(new PackageTask(), new Options().set("value1","cfe")
 						.set("value2", "myapp.jar").set("value3", "HelloWorld")
-						.set("value4", "C:\\Users\\USER\\eclipse-workspace\\heartbeat-v0.0.1")).build();
+						.set("value4", "./src")).build();
 		runner.start();
 	}
 
