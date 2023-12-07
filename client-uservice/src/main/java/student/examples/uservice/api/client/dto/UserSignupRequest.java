@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RequiredArgsConstructor
 @Getter
-@Setter
+//@Setter
 public class UserSignupRequest {
 	@Pattern(regexp = "^(?=.*[a-zA-Z])(?=.*[0-9]).{8,}$", message = " should be minimum 8 characters latin alphabet and digits")
 	private String username;

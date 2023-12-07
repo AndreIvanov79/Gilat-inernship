@@ -4,7 +4,6 @@ package student.examples.uservice.api.client.rest;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,18 +16,21 @@ import student.examples.uservice.api.client.dto.RestSuccessResponse;
 import student.examples.uservice.api.client.dto.UserSignOutRequest;
 import student.examples.uservice.api.client.dto.UserSigninRequest;
 import student.examples.uservice.api.client.dto.UserSignupRequest;
+import student.examples.uservice.api.client.grpc.UserServiceImpl;
 
 @Slf4j
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
+	
+	private final UserServiceImpl userServiceImpl = new UserServiceImpl();
 
 	@PostMapping("/signup")
 	public RestResponse signup(@Valid @RequestBody UserSignupRequest userSignupRequest) {
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("message", String.format("an email was been sent to %s, please verify and activate your account",
 				userSignupRequest.getEmail()));
-		
+		userServiceImpl.createUser(userSignupRequest);
 		RestResponse response = new RestSuccessResponse(200, map);
 		return response;
 	}
