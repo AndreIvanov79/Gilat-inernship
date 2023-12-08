@@ -16,20 +16,20 @@ import student.examples.uservice.api.client.dto.UserSignupRequest;
 public class UserServiceImpl extends UserServiceImplBase {
 	public void createUser(UserSignupRequest userSignupRequest) {
 
-		ManagedChannel channel = ManagedChannelBuilder.forTarget("localhost:8442").usePlaintext().build();
+		ManagedChannel channel = ManagedChannelBuilder.forTarget("localhost:6565").usePlaintext().build();
 
 		UserServiceGrpc.UserServiceBlockingStub stub = UserServiceGrpc.newBlockingStub(channel);
 		
 
 		UserServiceOuterClass.UserRequest request = UserServiceOuterClass.UserRequest
 				.newBuilder()
-				.setId(UUID.randomUUID().toString())
+	//			.setId(UUID.randomUUID().toString())
 				.setUsername(userSignupRequest.getUsername())
 				.setEmail(userSignupRequest.getEmail())
 				.setPassword(userSignupRequest.getPassword())
 				.build();
 		UserServiceOuterClass.UserResponse response = stub.createUser(request);
-		System.out.println(response);
+		System.out.println("CLIENTRESP:"+response);
         channel.shutdownNow();
 	}
 

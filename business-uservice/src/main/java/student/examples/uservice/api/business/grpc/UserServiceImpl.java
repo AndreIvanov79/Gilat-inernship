@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.UUID;
 
 import org.lognet.springboot.grpc.GRpcService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import io.grpc.Server;
@@ -13,32 +14,30 @@ import student.examples.grpc.UserServiceGrpc.UserServiceImplBase;
 import student.examples.grpc.UserServiceOuterClass;
 import student.examples.grpc.UserServiceOuterClass.UserRequest;
 import student.examples.grpc.UserServiceOuterClass.UserResponse;
+import student.examples.uservice.api.business.db.entities.User;
+import student.examples.uservice.api.business.db.repositories.UserRepository;
 
 @GRpcService
 public class UserServiceImpl extends UserServiceImplBase {
+	
+	@Autowired
+	private UserRepository userRepository;
 
 	@Override
 	public void createUser(UserRequest request, StreamObserver<UserResponse> responseObserver) {
-//		Server server = ServerBuilder.forPort(8442).addService(new UserServiceImpl()).build();
-//		try {
-//			server.start();
-//			System.out.println("Server started...");
-//			server.awaitTermination();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
 
-		System.out.println(request);
-		UserServiceOuterClass.UserResponse response = UserServiceOuterClass.UserResponse.newBuilder()
-//				.se
-//				.setUsername(request.getUsername())
-//				.setEmail(request.getEmail())
-//				.setPassword(request.getPassword())
-				.build();
+		User user = new User();
+		user.setId(UUID.randomUUID());
+		user.setUsername(request.getUsername());
+		user.setEmail(request.getEmail());
+		user.setPassword(request.getPassword());
+		System.out.println("Userto DB: "+user);
+		userRepository.save(user);
+
+		System.out.println("SERVREQ: "+request);
+		UserServiceOuterClass.UserResponse response = UserServiceOuterClass.UserResponse.newBuilder().build();
+
+		System.out.println("SERVRES: "+response);
 		responseObserver.onNext(response);
 		responseObserver.onCompleted();
 
