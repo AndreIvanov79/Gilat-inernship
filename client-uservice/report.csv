@@ -1,0 +1,474 @@
+username
+ is not valid.
+j7
+ is not valid.
+billy111
+ is not valid.
+katty111
+ is not valid.
+paul8888
+ is not valid.
+bobMarley1
+ must be minimum 8 characters, spechial characters and digits
+annANN1
+ must be minimum 8 characters, spechial characters and digits
+adaMada22
+ is not valid.
+username
+ is not valid.
+j7
+ should be minimum 8 characters latin alphabet and digits
+billy111
+ must be minimum 8 characters, spechial characters and digits
+katty111
+ must be minimum 8 characters, spechial characters and digits
+paul8888
+ is not valid.
+bobMarley1
+ is not valid.
+annANN1
+ should be minimum 8 characters latin alphabet and digits
+adaMada22
+ must be minimum 8 characters, spechial characters and digits
+username
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+username
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+paul8888
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+username
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+username
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+paul8888
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+username
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+username
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+paul8888
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+username
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+username
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+paul8888
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+paul8888
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+paul8888
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+paul8888
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+paul8888
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+username
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+paul8888
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+username
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+paul8888
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+username
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+paul8888
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+username
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+paul8888
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+username
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+j7
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+billy111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+katty111
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+paul8888
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+bobMarley1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' should be minimum 8 characters latin alphabet and digits', propertyPath=username, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' should be minimum 8 characters latin alphabet and digits'}
+annANN1
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' is not valid.', propertyPath=email, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' is not valid.'}
+adaMada22
+ConstraintViolationImpl{interpolatedMessage=' must be minimum 8 characters, spechial characters and digits', propertyPath=password, rootBeanClass=class student.examples.uservice.api.client.dto.UserSignupRequest, messageTemplate=' must be minimum 8 characters, spechial characters and digits'}
