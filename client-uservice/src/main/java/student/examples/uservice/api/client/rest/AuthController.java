@@ -1,6 +1,5 @@
 package student.examples.uservice.api.client.rest;
 
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,21 +15,26 @@ import student.examples.uservice.api.client.dto.RestSuccessResponse;
 import student.examples.uservice.api.client.dto.UserSignOutRequest;
 import student.examples.uservice.api.client.dto.UserSigninRequest;
 import student.examples.uservice.api.client.dto.UserSignupRequest;
-import student.examples.uservice.api.client.grpc.UserServiceImpl;
+import student.examples.uservice.api.client.dto.UserSignupResponse;
+import student.examples.uservice.api.client.services.SignupResponseService;
+import student.examples.uservice.api.client.services.WithdrowResponseService;
 
 @Slf4j
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
-	
-	private final UserServiceImpl userServiceImpl = new UserServiceImpl();
+
+	private final SignupResponseService responseService = new SignupResponseService();
+	private final WithdrowResponseService withdrowResponseService = new WithdrowResponseService();
 
 	@PostMapping("/signup")
 	public RestResponse signup(@Valid @RequestBody UserSignupRequest userSignupRequest) {
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("message", String.format("an email was been sent to %s, please verify and activate your account",
 				userSignupRequest.getEmail()));
-		userServiceImpl.createUser(userSignupRequest);
+
+		UserSignupResponse user = responseService.getResponse(userSignupRequest);
+
 		RestResponse response = new RestSuccessResponse(200, map);
 		return response;
 	}
@@ -40,12 +44,20 @@ public class AuthController {
 
 		return new RestSuccessResponse(200, "signin success");
 	}
-	
+
 	@PostMapping("/signout")
-    public RestResponse signOut(@Valid @RequestBody UserSignOutRequest signOutRequest) {
-   
-        return new RestSuccessResponse(200, "signin success");
-   
-    }
+	public RestResponse signOut(@Valid @RequestBody UserSignOutRequest signOutRequest) {
+
+		return new RestSuccessResponse(200, "signout success");
+
+	}
+
+	@PostMapping("/withdrow")
+	public RestResponse withdrow(@RequestBody UserSignOutRequest signOutRequest) {
+
+		String token = withdrowResponseService.getResponse(signOutRequest);
+		System.out.println("CONTROLLER: "+token);
+		return new RestSuccessResponse(200, "withdrow success");
+	}
 
 }

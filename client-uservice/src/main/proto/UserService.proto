@@ -1,17 +1,26 @@
 syntax = "proto3";
 package student.examples.grpc;
 
-message UserRequest {
+message CreateRequest {
   string id = 1;
   string username = 2;
   string email = 3;
   string password = 4;
 }
 
-message UserResponse {
+message CreateResponse {
+  string user = 1;
+}
+
+message DeleteRequest {
+  string token = 1;
+}
+
+message DeleteResponse {
   string user = 1;
 }
 
 service UserService {
-  rpc createUser(UserRequest) returns (UserResponse);
+  rpc createUser(CreateRequest) returns (CreateResponse);
+  rpc deleteUser(DeleteRequest) returns (DeleteResponse);
 }
