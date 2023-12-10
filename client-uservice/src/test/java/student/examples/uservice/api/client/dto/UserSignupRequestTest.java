@@ -27,7 +27,10 @@ import org.eclipse.jgit.api.errors.InvalidRemoteException;
 import org.eclipse.jgit.api.errors.TransportException;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
+import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
 import org.junit.Assert;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -75,6 +78,17 @@ public class UserSignupRequestTest {
 	private MockMvc mockMvc;
 
 	private File file = new File("./report.csv");
+	
+	
+	@BeforeAll
+	public static void setUp() throws IOException {
+		cloneRepository();
+	}
+
+	@AfterAll
+	public static void tearDown() {
+		pushToRepository();
+	}
 
 	// @Test
 	public void test() throws Exception {
@@ -120,7 +134,6 @@ public class UserSignupRequestTest {
 			violations.stream().forEach(val -> createCsvFile(username, val.toString(), file));
 		}
 
-		toGit();
 
 		Assertions.assertThat(!violations.isEmpty());
 	}
@@ -142,11 +155,33 @@ public class UserSignupRequestTest {
 		}
 	}
 
-	private void toGit() throws InvalidRemoteException, TransportException, GitAPIException, IOException {
-		Repository existingRepo = new FileRepositoryBuilder()
-			    .setGitDir(new File("my_repo/.git"))
-			    .build();
-		System.out.println("GIT: " + existingRepo);
+	private static void cloneRepository() throws IOException {
+		try {
+			File destinationDirectory = new File("C:\\Users\\USER\\test-validation");
+			System.out.println("Destination Directory: " + destinationDirectory.getAbsolutePath());
+
+			if (destinationDirectory.exists() && destinationDirectory.list().length == 0) {
+				Git.cloneRepository().setURI("https://github.com/AndreIvanov79/Test-validation.git")
+						.setDirectory(destinationDirectory).setBranch("main")
+						.call();
+			} else {
+				System.out.println("Destination directory is not empty. Skipping cloning.");
+			}
+		} catch (GitAPIException e) {
+			e.printStackTrace();
+		}
 	}
 
+	private static void pushToRepository() {
+		try (Git git = Git.open(new File("C:\\Users\\USER\\test-validation\\.git"))) {
+			git.add().addFilepattern(".").call();
+			git.add().addFilepattern(".").call();
+			git.commit().setMessage("test results").call();
+			git.push().setCredentialsProvider(
+					new UsernamePasswordCredentialsProvider("AndreIvanov79", "26ja1979"))
+					.call();
+		} catch (IOException | GitAPIException e) {
+			e.printStackTrace();
+		}
+	}
 }

@@ -7,6 +7,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.Rule;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -24,13 +25,14 @@ import io.grpc.ServerServiceDefinition;
 import io.grpc.testing.GrpcServerRule;
 import student.examples.uservice.api.client.grpc.UserServiceImpl;
 import student.examples.uservice.api.client.rest.AuthController;
+import student.examples.uservice.api.client.services.SignupResponseService;
 
-//@ExtendWith(SpringExtension.class)
-//@WebMvcTest(controllers = AuthController.class)
+@ExtendWith(SpringExtension.class)
+@WebMvcTest(controllers = AuthController.class)
 public class AuthControllerTest {
 
 	@Mock
-	private UserServiceImpl userServiceImpl;
+	private SignupResponseService signupResponseService;
 	
 	@Rule
     public final GrpcServerRule grpcServerRule = new GrpcServerRule().directExecutor();
@@ -43,48 +45,57 @@ public class AuthControllerTest {
 
 	@Autowired
 	private ObjectMapper objectMapper;
+	
+	private UserSignupResponse validRequest;
+	private UserSignupResponse invalidRequest;
+	@BeforeEach
+	public void setup() {
+		validRequest = new UserSignupResponse();
+		validRequest.setUsername("jerry111");
+		validRequest.setEmail("jerry@mail.com");
+		validRequest.setPassword("jerryJ#111");
+		
+		invalidRequest = new UserSignupResponse();
+		invalidRequest.setUsername("jo");
+		invalidRequest.setEmail("jojo.mail");
+		invalidRequest.setPassword("  ");
+	}
 
-//	@Test
+	@Test
 	void whenInputIsInvalid_thenReturnsStatus400() throws Exception {
 
-		UserSignupRequest request = new UserSignupRequest("jerry111", "jerry@mail.com", "jerryJ#111", "jerryJ#111");
+		when(signupResponseService.getResponse(any(UserSignupRequest.class))).thenReturn(invalidRequest);
 
-//		when(userServiceImpl.createUser(any(UserSignupRequest.class))).thenReturn(request);
-		grpcServerRule.getServiceRegistry().addService(userServiceImpl);
-
-		String body = objectMapper.writeValueAsString(request);
+		String body = objectMapper.writeValueAsString(invalidRequest);
 
 		mvc.perform(post("/auth/signup").contentType("application/json;charset=UTF-8").content(body))
 				.andExpect(status().isBadRequest());
 	}
 
-//	@Test
+	@Test
 	void whenInputIsInvalid_thenReturnsStatus400WithErrorObject() throws Exception {
-		UserSignupRequest request = new UserSignupRequest("jerry111", "jerry@mail.com", "jerryJ#111", "jerryJ#111");
-//		when(userServiceImpl.createUser(any(UserSignupRequest.class))).thenReturn(request);
+
+		when(signupResponseService.getResponse(any(UserSignupRequest.class))).thenReturn(invalidRequest);
 		
-		ServerServiceDefinition serviceDefinition = userServiceImpl.bindService();
-		grpcServerRule.getServiceRegistry().addService(serviceDefinition);
-		String body = objectMapper.writeValueAsString(request);
+		String body = objectMapper.writeValueAsString(invalidRequest);
 
 		MvcResult result = mvc.perform(
 				post("https://localhost:8444/auth/signup").contentType("application/json;charset=UTF-8").content(body))
 				.andExpect(status().isBadRequest()).andReturn();
 
-		assertThat(result.getResponse().getContentAsString()).contains("violations");
+		assertThat(result.getResponse().getContentAsString()).contains("must not be empty");
 	}
 
-//	@Test
+	@Test
 	void whenInputIsValid_thenReturnsStatus200() throws Exception {
-		UserSignupRequest request = new UserSignupRequest("jerry111", "jerry@mail.com", "jerryJ#111", "jerryJ#111");
-//		when(userServiceImpl.createUser(any(UserSignupRequest.class))).thenReturn(request);
-		
-		grpcServerRule.getServiceRegistry().addService(userServiceImpl);
-		String body = objectMapper.writeValueAsString(request);
+
+		when(signupResponseService.getResponse(any(UserSignupRequest.class))).thenReturn(validRequest);
+
+		String body = objectMapper.writeValueAsString(validRequest);
 
 		mvc.perform(
 				post("https://localhost:8444/auth/signup").contentType("application/json;charset=UTF-8").content(body))
-				.andExpect(status().isOk());
+				.andExpect(status().is(200));
 	}
 
 }
