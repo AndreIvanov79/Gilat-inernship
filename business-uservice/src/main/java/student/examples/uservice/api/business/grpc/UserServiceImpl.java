@@ -14,6 +14,7 @@ import student.examples.grpc.UserServiceOuterClass.DeleteRequest;
 import student.examples.grpc.UserServiceOuterClass.DeleteResponse;
 import student.examples.uservice.api.business.db.entities.User;
 import student.examples.uservice.api.business.db.repositories.UserRepository;
+import student.examples.uservice.api.business.mail.EmailService;
 import student.examples.uservice.api.business.mail.MailConfirmationService;
 import student.examples.uservice.api.business.util.UserToken;
 
@@ -22,9 +23,12 @@ public class UserServiceImpl extends UserServiceImplBase {
 
 	@Autowired
 	private UserRepository userRepository;
-
+	
 	@Autowired
-	private MailConfirmationService mailConfirmationService;
+	private EmailService emailService;
+
+//	@Autowired
+//	private MailConfirmationService mailConfirmationService;
 
 	@Override
 	public void createUser(CreateRequest request, StreamObserver<CreateResponse> responseObserver) {
@@ -54,7 +58,8 @@ public class UserServiceImpl extends UserServiceImplBase {
 		responseObserver.onNext(response);
 		responseObserver.onCompleted();
 		
-		mailConfirmationService.registerUser(user);
+		emailService.sendRegistrationEmail(user);
+	//	mailConfirmationService.registerUser(user);
 
 	}
 	
@@ -70,6 +75,7 @@ public class UserServiceImpl extends UserServiceImplBase {
 		responseObserver.onNext(response);
 		responseObserver.onCompleted();
 		
-		mailConfirmationService.removeUser(request.getToken());
+		emailService.sendRemoveEmail(request.getToken());
+//		mailConfirmationService.removeUser(request.getToken());
 	}
 }

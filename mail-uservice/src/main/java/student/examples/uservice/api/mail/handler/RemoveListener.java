@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 import student.examples.uservice.api.mail.service.EmailService;
 
 @Service
-@KafkaListener(topics = "user-remove-topic", groupId = "mail-uservice")
+//@KafkaListener(topics = "user-remove-topic", groupId = "mail-uservice")
 public class RemoveListener {
 
 	@Autowired
 	private EmailService emailService;
 
-	@KafkaHandler
+//	@KafkaHandler
 	public void handleUserUnsubscribe(String message) {
 		String emailAddress = "dyaka1979@gmail.com";
 		String emailSubject = "Remove Confirmation";
