@@ -1,4 +1,4 @@
-package student.examples.uservice.api.business.mail;
+package student.examples.uservice.api.mail.config;
 
 import java.util.Properties;
 

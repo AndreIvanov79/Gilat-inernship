@@ -1,4 +1,4 @@
-package student.examples.uservice.api.business.mail;
+package student.examples.uservice.api.mail.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
