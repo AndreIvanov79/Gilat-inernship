@@ -8,6 +8,10 @@ import io.grpc.stub.StreamObserver;
 import student.examples.grpc.UserServiceGrpc;
 import student.examples.grpc.UserServiceGrpc.UserServiceImplBase;
 import student.examples.grpc.UserServiceOuterClass;
+import student.examples.grpc.UserServiceOuterClass.ConfirmRegistrationRequest;
+import student.examples.grpc.UserServiceOuterClass.ConfirmRegistrationResponse;
+import student.examples.grpc.UserServiceOuterClass.ConfirmRemovingRequest;
+import student.examples.grpc.UserServiceOuterClass.ConfirmRemovingResponse;
 import student.examples.grpc.UserServiceOuterClass.CreateRequest;
 import student.examples.grpc.UserServiceOuterClass.CreateResponse;
 import student.examples.grpc.UserServiceOuterClass.DeleteRequest;
@@ -32,14 +36,13 @@ public class UserServiceImpl extends UserServiceImplBase {
 				.setPassword(userSignupRequest.getPassword())
 				.build();
 		UserServiceOuterClass.CreateResponse response = stub.createUser(request);
-		System.out.println("CLIENTcreateRESP:"+response.getUser());
         channel.shutdownNow();
 		return response.getUser();
 	}
 	
 	
 	public String deleteUser(UserSignOutRequest signOutRequest) {
-		System.out.println("TOKENtoDelete: "+signOutRequest.getToken());
+		
 		ManagedChannel channel = ManagedChannelBuilder.forTarget("localhost:6565").usePlaintext().build();
 
 		UserServiceGrpc.UserServiceBlockingStub stub = UserServiceGrpc.newBlockingStub(channel);
@@ -51,9 +54,44 @@ public class UserServiceImpl extends UserServiceImplBase {
 				.build();
 		
 		UserServiceOuterClass.DeleteResponse response = stub.deleteUser(request);
-		System.out.println("CLIENTdeleteRESP:"+response.getUser());
         channel.shutdownNow();
 		return response.getUser();
+	}
+	
+	
+	public String confirmRegistration(UserSignOutRequest signOutRequest) {
+		System.out.println("ConfirmTOKEN: "+signOutRequest.getToken());
+		ManagedChannel channel = ManagedChannelBuilder.forTarget("localhost:6565").usePlaintext().build();
+
+		UserServiceGrpc.UserServiceBlockingStub stub = UserServiceGrpc.newBlockingStub(channel);
+		
+		UserServiceOuterClass.ConfirmRegistrationRequest request = UserServiceOuterClass.ConfirmRegistrationRequest
+				.newBuilder()
+				.setToken(signOutRequest.getToken())
+				.build();
+		
+		UserServiceOuterClass.ConfirmRegistrationResponse response = stub.confirmRegistration(request);
+		System.out.println("CLIENTconfirmResp:"+response.getMessage());
+        channel.shutdownNow();
+		return response.getMessage();
+	}
+
+
+	public String confirmRemoving(UserSignOutRequest signOutRequest) {
+		
+		ManagedChannel channel = ManagedChannelBuilder.forTarget("localhost:6565").usePlaintext().build();
+
+		UserServiceGrpc.UserServiceBlockingStub stub = UserServiceGrpc.newBlockingStub(channel);
+		
+		UserServiceOuterClass.ConfirmRemovingRequest request = UserServiceOuterClass.ConfirmRemovingRequest
+				.newBuilder()
+				.setToken(signOutRequest.getToken())
+				.build();
+		
+		UserServiceOuterClass.ConfirmRemovingResponse response = stub.confirmRemoving(request);
+		System.out.println("CLIENTremoveResp:"+response.getMessage());
+        channel.shutdownNow();
+		return response.getMessage();
 	}
 
 }

@@ -5,6 +5,7 @@ import org.springframework.kafka.annotation.KafkaHandler;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
+import jakarta.mail.MessagingException;
 import student.examples.uservice.api.mail.service.EmailService;
 
 @Service
@@ -15,7 +16,7 @@ public class RemoveListener {
 	private EmailService emailService;
 
 //	@KafkaHandler
-	public void handleUserUnsubscribe(String message) {
+	public void handleUserUnsubscribe(String message) throws MessagingException {
 		String emailAddress = "dyaka1979@gmail.com";
 		String emailSubject = "Remove Confirmation";
 		String emailBody = "Hi!\nYour GODZILA GAME account was successfully removed.";

@@ -4,7 +4,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import student.examples.uservice.api.client.dto.UserSignOutRequest;
-import student.examples.uservice.api.client.dto.UserSignupRequest;
 import student.examples.uservice.api.client.dto.UserSignupResponse;
 import student.examples.uservice.api.client.grpc.UserServiceImpl;
 
@@ -12,8 +11,8 @@ public class WithdrowResponseService {
 
 	private UserServiceImpl userServiceImpl = new UserServiceImpl();
 	
-	public String getResponse(UserSignOutRequest userSignOutRequest) {
-		return userServiceImpl.deleteUser(userSignOutRequest);
+	public UserSignupResponse getResponse(UserSignOutRequest userSignOutRequest) {
+		return parseUserString(userServiceImpl.deleteUser(userSignOutRequest));
 	}
 	
 	private UserSignupResponse parseUserString(String userString) {
@@ -30,7 +29,7 @@ public class WithdrowResponseService {
 
             userSignupResponse.setUsername(username);
             userSignupResponse.setEmail(email);
-            userSignupResponse.setPassword(password);
+   //         userSignupResponse.setPassword(password);
             userSignupResponse.setToken(token);
             
             return userSignupResponse;

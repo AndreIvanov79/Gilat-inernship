@@ -13,9 +13,10 @@ import student.examples.uservice.api.business.db.entities.User;
 
 public interface UserRepository extends JpaRepository<User, UUID> {
 
-	@Transactional
-	@Modifying
-	@Query("DELETE FROM User u WHERE u.token = :token")
-	void deleteByToken(@Param("token") String token);
+	@Query("SELECT u FROM User u WHERE u.token = :token")
+    User findUserByToken(@Param("token") String token);
+	
+//	@Query("UPDATE User u SET u.isActive = true WHERE u.token = :token")
+//    void activateUser(@Param("token") String token);
 
 }

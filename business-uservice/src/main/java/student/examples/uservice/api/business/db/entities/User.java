@@ -2,6 +2,8 @@ package student.examples.uservice.api.business.db.entities;
 
 import java.util.UUID;
 
+import org.springframework.boot.context.properties.bind.DefaultValue;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -28,4 +30,7 @@ public class User {
 	
 	@Column(name = "token")
 	private String token;
+	
+	@Column(name = "isActive", columnDefinition = "boolean default false", nullable = false)
+	private boolean isActive = false;
 }

@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import student.examples.uservice.api.client.dto.UserSignOutRequest;
 import student.examples.uservice.api.client.dto.UserSignupRequest;
 import student.examples.uservice.api.client.dto.UserSignupResponse;
 import student.examples.uservice.api.client.grpc.UserServiceImpl;
@@ -13,7 +14,7 @@ public class SignupResponseService {
 	
 	private UserServiceImpl userServiceImpl = new UserServiceImpl();
 	
-	public UserSignupResponse getResponse(UserSignupRequest userSignupRequest) {
+	public UserSignupResponse getCreateResponse(UserSignupRequest userSignupRequest) {
 		return parseUserString(userServiceImpl.createUser(userSignupRequest));
 	}
 	
@@ -31,7 +32,7 @@ public class SignupResponseService {
 
             userSignupResponse.setUsername(username);
             userSignupResponse.setEmail(email);
-            userSignupResponse.setPassword(password);
+   //         userSignupResponse.setPassword(password);
             userSignupResponse.setToken(token);
             
             return userSignupResponse;
@@ -39,5 +40,6 @@ public class SignupResponseService {
             throw new IllegalArgumentException("Invalid user string format");
         }
     }
+
 }
 	

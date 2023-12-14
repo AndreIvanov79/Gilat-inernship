@@ -26,6 +26,7 @@ import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.api.errors.InvalidRemoteException;
 import org.eclipse.jgit.api.errors.TransportException;
 import org.eclipse.jgit.lib.Repository;
+import org.eclipse.jgit.lib.StoredConfig;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
 import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
 import org.junit.Assert;
@@ -33,6 +34,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.mockito.InjectMocks;
@@ -72,14 +74,18 @@ import student.examples.uservice.api.client.rest.AuthController;
 @SpringBootTest
 public class UserSignupRequestTest {
 
+	@TempDir
+	static File tempDir;
+
 	@Autowired
 	private Validator validator;
 
 	private MockMvc mockMvc;
 
 	private File file = new File("./report.csv");
-	
-	
+
+	private static final String SAMPLE_CSV_FILE = System.getProperty("user.dir") + "/sample.csv";
+
 	@BeforeAll
 	public static void setUp() throws IOException {
 		cloneRepository();
@@ -134,7 +140,6 @@ public class UserSignupRequestTest {
 			violations.stream().forEach(val -> createCsvFile(username, val.toString(), file));
 		}
 
-
 		Assertions.assertThat(!violations.isEmpty());
 	}
 
@@ -157,31 +162,31 @@ public class UserSignupRequestTest {
 
 	private static void cloneRepository() throws IOException {
 		try {
-			File destinationDirectory = new File("C:\\Users\\USER\\test-validation");
+			File destinationDirectory = new File("C:\\Users\\User\\AppData\\Local\\Temp\\data");
 			System.out.println("Destination Directory: " + destinationDirectory.getAbsolutePath());
 
 			if (destinationDirectory.exists() && destinationDirectory.list().length == 0) {
 				Git.cloneRepository().setURI("https://github.com/AndreIvanov79/Test-validation.git")
-						.setDirectory(destinationDirectory).setBranch("main")
-						.call();
+						.setDirectory(destinationDirectory).setBranch("main").call();
 			} else {
 				System.out.println("Destination directory is not empty. Skipping cloning.");
 			}
 		} catch (GitAPIException e) {
 			e.printStackTrace();
+			System.out.println("Error cloning repository: " + e.getMessage());
 		}
 	}
 
 	private static void pushToRepository() {
-		try (Git git = Git.open(new File("C:\\Users\\USER\\test-validation\\.git"))) {
+		try (Git git = Git.open(new File("C:\\Users\\User\\AppData\\Local\\Temp\\data\\.git"))) {
 			git.add().addFilepattern(".").call();
 			git.add().addFilepattern(".").call();
-			git.commit().setMessage("test results").call();
-			git.push().setCredentialsProvider(
-					new UsernamePasswordCredentialsProvider("AndreIvanov79", "26ja1979"))
-					.call();
+			git.commit().setMessage("Test results").call();
+			git.push().setCredentialsProvider(new UsernamePasswordCredentialsProvider("AndreIvanov79",
+					"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")).call();
 		} catch (IOException | GitAPIException e) {
 			e.printStackTrace();
+			System.out.println("Error pushing to repository: " + e.getMessage());
 		}
 	}
 }

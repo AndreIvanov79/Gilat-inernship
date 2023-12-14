@@ -14,31 +14,22 @@ import student.examples.uservice.api.business.db.entities.User;
 public class EmailService {
 
 	@Autowired
-    private RestTemplate restTemplate;
+	private RestTemplate restTemplate;
 
 	@Value("${mail-uservice.base-url}")
-    private String mailUserviceBaseUrl;
+	private String mailUserviceBaseUrl;
 
-    public void sendRegistrationEmail(User user) {
-    	
-    	HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
+	
+	public void sendEmail(User user, String url) {
+		System.out.println("USERfromEMailServiceBusiness: "+user.getEmail());
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_JSON);
 
-        String userEmail = user.getEmail();
-        String requestBody = "{\"email\": \"" + userEmail + "\"}";
+		String requestBody = "{\"email\": \"" + user.getEmail() + "\", \"token\": \"" + user.getToken() + "\"}";
 
-        HttpEntity<String> requestEntity = new HttpEntity<>(requestBody, headers);
-        restTemplate.postForEntity(mailUserviceBaseUrl + "/send-registration-email", requestEntity, String.class);
-
-    }
-
-    public void sendRemoveEmail(String token) {
-    	HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
-
-        String requestBody = "{\"token\": \"" + token + "\"}";
-
-        HttpEntity<String> requestEntity = new HttpEntity<>(requestBody, headers);
-        restTemplate.postForEntity(mailUserviceBaseUrl + "/send-remove-email", requestEntity, String.class);
-    }
+		System.out.println("REQUESTBODDDY: "+requestBody);
+		HttpEntity<String> requestEntity = new HttpEntity<>(requestBody, headers);
+		restTemplate.postForEntity(mailUserviceBaseUrl + url, requestEntity, String.class);
+		System.out.println("URRRLLL: "+mailUserviceBaseUrl + url);
+	}
 }

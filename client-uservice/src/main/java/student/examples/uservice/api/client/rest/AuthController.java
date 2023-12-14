@@ -3,9 +3,11 @@ package student.examples.uservice.api.client.rest;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.validation.Valid;
@@ -16,6 +18,8 @@ import student.examples.uservice.api.client.dto.UserSignOutRequest;
 import student.examples.uservice.api.client.dto.UserSigninRequest;
 import student.examples.uservice.api.client.dto.UserSignupRequest;
 import student.examples.uservice.api.client.dto.UserSignupResponse;
+import student.examples.uservice.api.client.services.RegisterConfirmationService;
+import student.examples.uservice.api.client.services.RemoveConfirmationService;
 import student.examples.uservice.api.client.services.SignupResponseService;
 import student.examples.uservice.api.client.services.WithdrowResponseService;
 
@@ -24,8 +28,10 @@ import student.examples.uservice.api.client.services.WithdrowResponseService;
 @RequestMapping("/auth")
 public class AuthController {
 
-	private final SignupResponseService responseService = new SignupResponseService();
-	private final WithdrowResponseService withdrowResponseService = new WithdrowResponseService();
+	private SignupResponseService signupResponseService = new SignupResponseService();
+	private WithdrowResponseService withdrowResponseService = new WithdrowResponseService();
+	private RegisterConfirmationService registerConfirmationService = new RegisterConfirmationService();
+	private RemoveConfirmationService removeConfirmationService = new RemoveConfirmationService();
 
 	@PostMapping("/signup")
 	public RestResponse signup(@Valid @RequestBody UserSignupRequest userSignupRequest) {
@@ -33,7 +39,7 @@ public class AuthController {
 		map.put("message", String.format("an email was been sent to %s, please verify and activate your account",
 				userSignupRequest.getEmail()));
 
-		UserSignupResponse user = responseService.getResponse(userSignupRequest);
+		UserSignupResponse user = signupResponseService.getCreateResponse(userSignupRequest);
 
 		RestResponse response = new RestSuccessResponse(200, map);
 		return response;
@@ -55,9 +61,31 @@ public class AuthController {
 	@PostMapping("/withdrow")
 	public RestResponse withdrow(@RequestBody UserSignOutRequest signOutRequest) {
 
-		String token = withdrowResponseService.getResponse(signOutRequest);
-		System.out.println("CONTROLLER: "+token);
+		
+		UserSignupResponse user = withdrowResponseService.getResponse(signOutRequest);
+	//	UserSignupResponse user = responseService.getDeleteResponse(signOutRequest);
 		return new RestSuccessResponse(200, "withdrow success");
+	}
+	
+	@GetMapping("/register")
+	public RestResponse registrationConfirmation(@RequestParam(name = "token") String token) {
+		System.out.println("PARAM: "+token);
+		UserSignOutRequest userSignOutRequest = new UserSignOutRequest();
+		userSignOutRequest.setToken(token);
+		System.out.println("TOKEN FOR REGISTER: "+userSignOutRequest.getToken());
+		String message = registerConfirmationService.getConfirmationResponse(userSignOutRequest);
+		System.out.println("MESSAGEfromCONTROLLER: "+message);
+		return new RestSuccessResponse(200, message);
+	}
+	
+	@GetMapping("/remove")
+	public RestResponse removingConfirmation(@RequestParam(name = "token") String token) {
+		UserSignOutRequest userSignOutRequest = new UserSignOutRequest();
+		userSignOutRequest.setToken(token);
+		System.out.println("TOKEN FOR REMOVE: "+userSignOutRequest.getToken());
+		String message = removeConfirmationService.getRemovingResponse(userSignOutRequest);
+		System.out.println("REMOVE_MESSAGEfromCONTROLLER: "+message);
+		return new RestSuccessResponse(200, message);
 	}
 
 }

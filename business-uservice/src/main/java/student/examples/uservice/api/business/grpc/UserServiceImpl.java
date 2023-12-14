@@ -8,6 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import io.grpc.stub.StreamObserver;
 import student.examples.grpc.UserServiceGrpc.UserServiceImplBase;
 import student.examples.grpc.UserServiceOuterClass;
+import student.examples.grpc.UserServiceOuterClass.ConfirmRegistrationRequest;
+import student.examples.grpc.UserServiceOuterClass.ConfirmRegistrationResponse;
+import student.examples.grpc.UserServiceOuterClass.ConfirmRemovingRequest;
+import student.examples.grpc.UserServiceOuterClass.ConfirmRemovingResponse;
 import student.examples.grpc.UserServiceOuterClass.CreateRequest;
 import student.examples.grpc.UserServiceOuterClass.CreateResponse;
 import student.examples.grpc.UserServiceOuterClass.DeleteRequest;
@@ -23,7 +27,7 @@ public class UserServiceImpl extends UserServiceImplBase {
 
 	@Autowired
 	private UserRepository userRepository;
-	
+
 	@Autowired
 	private EmailService emailService;
 
@@ -47,35 +51,66 @@ public class UserServiceImpl extends UserServiceImplBase {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	
+
 		userRepository.save(user);
-		
-		System.out.println("SERVREQ: " + request);
+
 		UserServiceOuterClass.CreateResponse response = UserServiceOuterClass.CreateResponse.newBuilder()
 				.setUser(user.toString()).build();
 
-		System.out.println("SERVRES: " + response.getUser());
 		responseObserver.onNext(response);
 		responseObserver.onCompleted();
-		
-		emailService.sendRegistrationEmail(user);
-	//	mailConfirmationService.registerUser(user);
+
+		emailService.sendEmail(user, "/send-registration-email");
+
+		// mailConfirmationService.registerUser(user);
 
 	}
-	
+
 	@Override
 	public void deleteUser(DeleteRequest request, StreamObserver<DeleteResponse> responseObserver) {
-		
-		userRepository.deleteByToken(request.getToken());
-		
-		UserServiceOuterClass.DeleteResponse response = UserServiceOuterClass.DeleteResponse.newBuilder()
-				.setUser(request.getToken()).build();
 
-		System.out.println("SERVRES: " + response.getUser());
+		User userToDelete = userRepository.findUserByToken(request.getToken());
+		System.out.println("USER TO DELETE: "+userToDelete);
+		// userRepository.delete(userToDelete);
+
+		UserServiceOuterClass.DeleteResponse response = UserServiceOuterClass.DeleteResponse.newBuilder()
+				.setUser(userToDelete.toString()).build();
+
 		responseObserver.onNext(response);
 		responseObserver.onCompleted();
-		
-		emailService.sendRemoveEmail(request.getToken());
+
+		emailService.sendEmail(userToDelete, "/send-remove-email");
+
 //		mailConfirmationService.removeUser(request.getToken());
+	}
+
+	@Override
+	public void confirmRegistration(ConfirmRegistrationRequest request,
+			StreamObserver<ConfirmRegistrationResponse> responseObserver) {
+		System.out.println("BUSINESS confirm: " + request.getToken());
+
+		User userToActivate = userRepository.findUserByToken(request.getToken());
+		userToActivate.setActive(true);
+		User activatedUser = userRepository.save(userToActivate); // activateUser(request.getToken());
+		System.out.println("USER ACTIVATED: " + activatedUser);
+
+		UserServiceOuterClass.ConfirmRegistrationResponse response = UserServiceOuterClass.ConfirmRegistrationResponse
+				.newBuilder().setMessage("User " + activatedUser.getEmail() + " was activated.").build();
+
+		responseObserver.onNext(response);
+		responseObserver.onCompleted();
+	}
+
+	@Override
+	public void confirmRemoving(ConfirmRemovingRequest request,
+			StreamObserver<ConfirmRemovingResponse> responseObserver) {
+		User userToDelete = userRepository.findUserByToken(request.getToken());
+		userRepository.delete(userToDelete);
+
+		UserServiceOuterClass.ConfirmRemovingResponse response = UserServiceOuterClass.ConfirmRemovingResponse
+				.newBuilder().setMessage("User " + userToDelete.getEmail() + " was deleted.").build();
+
+		responseObserver.onNext(response);
+		responseObserver.onCompleted();
 	}
 }
