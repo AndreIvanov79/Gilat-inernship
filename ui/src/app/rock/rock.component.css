@@ -1,0 +1,16 @@
+.rock {
+  width: 100px;
+  height: 100px;
+
+  position: absolute;
+
+
+  transform: rotate(45deg);
+
+
+  border: 1px solid red;
+  background-image: url(/assets/meteor.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
