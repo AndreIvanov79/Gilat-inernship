@@ -1,0 +1,14 @@
+version: '3'
+services:
+ db:
+  container_name: ggpg
+  image: postgres:15.4-bullseye
+  environment:
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: postgres
+    PGDATA: /data/postgres
+    POSTGRES_DB: gg
+  volumes:
+     - ./data:/data/postgres
+  ports:
+    - "5436:5432"	

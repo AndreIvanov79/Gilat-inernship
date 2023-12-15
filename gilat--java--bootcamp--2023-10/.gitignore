@@ -1,0 +1,15 @@
+/.idea/
+/.settings/
+/hb-client/.settings/
+/hb-client/target/
+/hb-server/target/
+/hb-server/.settings/
+/util/target/
+/util/.settings/
+
+.classpath
+.project
+*.class
+*/*.class
+*.jar
+.DS_Store

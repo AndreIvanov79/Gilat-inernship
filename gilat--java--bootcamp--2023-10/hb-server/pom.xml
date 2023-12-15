@@ -1,0 +1,24 @@
+<project xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>student.examples</groupId>
+		<artifactId>godzilla-game</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>hb-server</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>student.examples</groupId>
+			<artifactId>util</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.6.0</version>
+		</dependency>
+	</dependencies>
+</project>

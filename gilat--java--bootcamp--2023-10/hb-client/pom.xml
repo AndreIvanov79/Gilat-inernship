@@ -1,0 +1,55 @@
+<project xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>student.examples</groupId>
+		<artifactId>godzilla-game</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>hb-client</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>student.examples</groupId>
+			<artifactId>util</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+	<!--build components-->
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>student.examples</groupId>
+					<artifactId>builder</artifactId>
+					<version>0.0.1-SNAPSHOT</version>
+
+					<configuration>
+						<!--suppress UnresolvedMavenProperty -->
+						<src>${projectt.basedir}</src>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<!-- Here come other details
+        ...
+        -->
+					<configuration>
+						<archive>
+							<manifest>
+								<addClasspath>true</addClasspath>
+								<mainClass>student.examples.client.HBClientDist</mainClass>
+							</manifest>
+						</archive>
+					</configuration>
+					<!-- Here come other details
+        ...
+        -->
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
